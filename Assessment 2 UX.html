@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyStream - Netflix-Inspired UI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">MyStream</div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">TV Shows</a></li>
+                <li><a href="#">Movies</a></li>
+                <li><a href="#">New & Popular</a></li>
+                <li>
+                    <a href="#" onclick="toggleMyListDropdown()">My List</a>
+                    <!-- My List Dropdown -->
+                    <ul class="my-list-dropdown" id="my-list-dropdown"></ul>
+                </li>
+            </ul>
+            <div class="search-bar">
+                <input type="text" placeholder="Search..." aria-label="Search" id="search">
+                <button onclick="performSearch()" class="search-button">Search</button>
+            </div>
+            <div class="user-profile">
+                <img src="profile.jpg" alt="User Profile" class="profile-pic">
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Bohemian Rhapsody</h1>
+            <p>Immerse yourself in an award-winning story.</p>
+            <button class="watch-button">Watch Now</button>
+            <button class="add-list-button" onclick="onclick="addToMyList('Bohemian Rhapsody')">Add to My List</button>
+        </div>
+</section>
+
+    <!-- Main Content with Filtering Options -->
+    <main>
+        <section class="filter-options">
+            <div class="filter-group">
+                <label for="genre-filter">Filter by Genre:</label>
+                <select id="genre-filter">
+                    <option value="all">All</option>
+                    <option value="action">Action</option>
+                    <option value="comedy">Comedy</option>
+                    <option value="drama">Drama</option>
+                    <option value="documentary">Documentary</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="year-filter">Filter by Year:</label>
+                <select id="year-filter">
+                    <option value="all">All</option>
+                    <option value="2024">2024</option>
+                    <option value="2023">2023</option>
+                    <option value="2022">2022</option>
+                    <option value="2021">2021</option>
+                    <option value="2020">2020</option>
+                    <option value="2019">2019</option>
+
+                </select>
+            </div>
+            <div class="filter-group">
+            	<label for="custom-keywords">Describe your preferred type of movies:</label>
+           	<input type="text" id="custom-keywords" placeholder="e.g., thrilling sci-fi...">
+            	<button onclick="fetchAISuggestions()" class="search-button">Get Suggestions</button>
+            </div>
+        </section>
+
+        <!-- Trending and Top Picks Rows -->
+        <section class="content-row">
+            <h2>Trending Now</h2>
+            <div class="content-thumbnails">
+                <div class="thumbnail" data-genre="action" data-year="2023">
+                    <img src="show1.jpeg" alt="Show 1 Thumbnail">
+                    <p>Mean Girls</p>
+                </div>
+                <div class="thumbnail" data-genre="comedy" data-year="2024">
+                    <img src="show2.jpeg" alt="Show 2 Thumbnail">
+                    <p>Beetlejuice</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-row">
+            <h2>Top Picks for You</h2>
+            <div class="content-thumbnails">
+                <div class="thumbnail" data-genre="drama" data-year="2022">
+                    <img src="show3.jpeg" alt="Show 3 Thumbnail">
+                    <p>Torrens University the Movie</p>
+                </div>
+                <div class="thumbnail" data-genre="documentary" data-year="2023">
+                    <img src="show4.jpg" alt="Show 4 Thumbnail">
+                    <p>Lord of the Rings</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 MyStream. All Rights Reserved.</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+
+    <!-- JavaScript for Interactivity -->
+    <script src="scripts.js"></script>
+</body>
+</html>

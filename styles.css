@@ -1,0 +1,289 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #141414;
+    color: #ffffff;
+}
+
+/* Styles for Watch and Add to My List Buttons */
+.watch-button {
+    background-color: #e50914;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.watch-button:hover {
+    background-color: #b00610;
+}
+
+.add-list-button {
+    background-color: #333;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* My List Dropdown */
+.my-list-dropdown {
+    display: none;
+    position: absolute;
+    top: 50px;
+    background-color: #1c1c1c;
+    list-style: none;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    z-index: 10; /* Ensure it appears above other elements */
+}
+
+.my-list-dropdown li {
+    color: #ffffff;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.my-list-dropdown li:hover {
+    background-color: #333;
+}
+
+/* Styles for Search and AI Suggestion Buttons */
+.search-button {
+    background-color: #e50914;
+    color: #ffffff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.search-button:hover {
+    background-color: #b00610;
+}
+
+/* Contact Us Button */
+.contact-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #e50914;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 20; /* Ensure it stays above most elements */
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #1c1c1c;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #e50914;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Profile Picture Styling */
+.profile-pic {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-left: 15px;
+}
+
+/* Contact Us Modal */
+.contact-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 30; /* Ensure it overlays all content */
+}
+
+.contact-modal-content {
+    background-color: #1c1c1c;
+    padding: 20px;
+    border-radius: 5px;
+    color: #ffffff;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+}
+
+.contact-modal .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #ffffff;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+/* Contact Form */
+.contact-modal-content form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-modal-content label {
+    margin-top: 10px;
+}
+
+.contact-modal-content input,
+.contact-modal-content textarea {
+    margin-top: 5px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #ffffff;
+}
+
+.submit-button {
+    background-color: #e50914;
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+/* Other styling (hero, footer, etc.) */
+.hero {
+    display: flex;
+    align-items: center;
+    padding: 50px 20px;
+    background-image: url('hero.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: left;
+    color: #ffffff;
+}
+
+.hero-text h1 {
+    font-size: 2.5em;
+}
+
+.hero button {
+    margin-right: 10px;
+}
+
+/* Thumbnail and content styles */
+.content-row {
+    margin: 20px 0;
+    padding: 0 20px;
+}
+
+.content-thumbnails {
+    display: flex;
+    overflow-x: auto;
+}
+
+.thumbnail {
+    flex: 0 0 auto;
+    margin-right: 10px;
+    width: 150px;
+    text-align: center;
+}
+
+.thumbnail img {
+    width: 100%;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.thumbnail img:hover {
+    transform: scale(1.1);
+}
+
+/* Filter Options */
+.filter-options {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 0 20px;
+    margin: 20px 0;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    max-width: 300px;
+}
+
+.filter-options input[type="text"],
+.filter-options select {
+    padding: 5px;
+    border: 1px solid #333;
+    border-radius: 3px;
+    background-color: #222;
+    color: #ffffff;
+}
+
+footer {
+    padding: 20px;
+    background-color: #1c1c1c;
+    text-align: center;
+    color: #808080;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    .content-thumbnails {
+        flex-direction: column;
+    }
+    .hero-text h1 {
+        font-size: 1.5em;
+    }
+    .filter-options {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
